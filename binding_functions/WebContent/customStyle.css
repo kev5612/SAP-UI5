@@ -1,0 +1,21 @@
+
+.customButton1>.sapMBtnInner {
+	background: blue !important;
+}
+
+.customTextColor>.sapMBtnText{
+	color: yellow !important;		
+	
+}
+.customButton2 {
+	padding-left: 60% !important;
+}
+
+.customButton2Background>.sapMBtnInner {
+	background: red !important;
+}
+
+.customTextColor2>.sapMBtnText{
+	color: black !important;		
+	
+}

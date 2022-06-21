@@ -1,0 +1,20 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="firstapp.mainView" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Hello world">
+		<content>
+			<Input
+				placeholder="Username"
+				width="100px"
+				fieldWidth="100%"
+				class="sapUiSmallMarginBottom"
+				id="userName">
+			</Input>
+			<Button
+				fieldwidth="100%"
+				width="100px"
+				text="Login"
+				press="onPress">
+			</Button>	
+		</content>
+	</Page>
+</core:View>

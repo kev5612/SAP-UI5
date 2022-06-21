@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m, sap.suite.ui.microchart"
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+
+		<script>
+				sap.ui.localResources("multiplecharts");
+				var app = new sap.m.SplitApp("splitApp",{mode:sap.m.SplitAppMode.ShowHideMode});
+				var masterPage = sap.ui.view({id:"idmultipleCharts1", viewName:"multiplecharts.multipleCharts", type:sap.ui.core.mvc.ViewType.JS});
+				//Set master page
+				app.addMasterPage(masterPage);
+				
+				//Create details pages
+				var barChartPage = sap.ui.view({id:"barChart", viewName:"multiplecharts.barChart", type:sap.ui.core.mvc.ViewType.JS});
+				app.addDetailPage(barChartPage);
+				var donutChartPage = sap.ui.view({id:"donutChart", viewName:"multiplecharts.donutChart", type:sap.ui.core.mvc.ViewType.JS});
+				app.addDetailPage(donutChartPage);
+				var lineChartPage = sap.ui.view({id:"lineChart", viewName:"multiplecharts.lineChart", type:sap.ui.core.mvc.ViewType.JS});
+				app.addDetailPage(lineChartPage);
+				
+				app.placeAt("content");
+		</script>
+
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>
